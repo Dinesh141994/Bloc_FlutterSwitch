@@ -12,7 +12,6 @@ class _Switch extends StatefulWidget {
 }
 
 class __SwitchState extends State<_Switch> {
- bool _switchValue=false;
   Bloc bloc=Bloc();
   @override
   Widget build(BuildContext context) {
@@ -29,13 +28,12 @@ class __SwitchState extends State<_Switch> {
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text("$_switchValue"),
+                      Text("${snapshot.data??false}"),
                 Switch(
                 value: snapshot.data??false,
                 activeColor: Colors.green,
                 onChanged: (b) {
                 bloc.setSwitch(b);
-                this._switchValue=b;
                 },
                 )
                     ],

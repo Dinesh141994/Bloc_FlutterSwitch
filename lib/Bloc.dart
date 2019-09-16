@@ -4,6 +4,7 @@ import 'package:rxdart/rxdart.dart';
 
 class Bloc{
 
+  //initialize bool type controller
   final _switchController = BehaviorSubject<bool>();
 
   /// Add data to the stream
